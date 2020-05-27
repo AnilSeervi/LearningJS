@@ -6,10 +6,10 @@ class Animal {
 		this.Weight = weight;
 	}
 	displayBreed() {
-		return this.Breed;
+		console.log(`Your Animal Name is ${this.Name}`);
 	}
 }
 
 const dog = new Animal('Julia', 'Dalmatian', 11, 20);
 console.log(dog);
-console.log(dog.displayBreed());
+dog.displayBreed();

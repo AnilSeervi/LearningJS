@@ -24,3 +24,18 @@ console.log(myArray);
 myArray.shift(); // Pops an element from the start of the array
 console.log(myArray);
 console.log(myArray.shift()); //But the shift method returns the element that was pooped from the beginning of the array.
+
+//An array declared with const can change its value. But doing something like below does something weird
+const a = [ 1, 2, 3 ];
+const b = [ 1, 2, 3 ];
+console.log(a === b); //returns false because they are not referencing the same memory
+console.log(a == b); //returns also false
+
+const c = a;
+console.log(a === c); // returns true as c refers to a in memory
+
+a.push(4);
+console.log(a === c); //Still returns true
+
+b.push(4);
+console.log(a === b); //Still returns false

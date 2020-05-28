@@ -28,7 +28,7 @@ console.log(myArray.shift()); //But the shift method returns the element that wa
 //An array declared with const can change its value. But doing something like below does something weird
 const a = [ 1, 2, 3 ];
 const b = [ 1, 2, 3 ];
-console.log(a === b); //returns false because they are not referencing the same memory
+console.log(a === b); //returns false because they are not referencing the same memory(its comparing the references in memeory)
 console.log(a == b); //returns also false
 
 const c = a;
@@ -39,3 +39,10 @@ console.log(a === c); //Still returns true
 
 b.push(4);
 console.log(a === b); //Still returns false
+
+let tictac = [ [ 'x', 'x', 'o' ], [ 'o', 'x', 'x' ], [ 'o', 'x', 'o' ] ];
+console.log(tictac);
+tictac[1].push('x');
+tictac[1][tictac[1].length - 1] = 'o';
+console.log(tictac[1]);
+console.log(tictac);
